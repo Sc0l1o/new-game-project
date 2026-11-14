@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://disfcivu0uto5" path="res://tutorial.gd" id="1_7n6eb"]
 [ext_resource type="Texture2D" uid="uid://slskg7g4orkb" path="res://sprites/stage.png" id="2_ehuit"]
 [ext_resource type="PackedScene" uid="uid://x4etidov6888" path="res://hedgehog.tscn" id="3_5mrt3"]
-[ext_resource type="PackedScene" uid="uid://cpqa18y4rs505" path="res://indicator.tscn" id="4_5mrt3"]
+[ext_resource type="PackedScene" uid="uid://c68pvlo385y2p" path="res://indicator.tscn" id="4_5mrt3"]
 
 [sub_resource type="FontFile" id="FontFile_p1nfs"]
 subpixel_positioning = 0
@@ -79,3 +79,5 @@ animation = &"default"
 
 [node name="Node2D" parent="." unique_id=1082578232 instance=ExtResource("4_5mrt3")]
 position = Vector2(408, 374)
+
+[connection signal="pressed" from="Control/VBoxContainer/return" to="." method="_on_return_pressed"]

@@ -1,7 +1,7 @@
 extends Control
 
-var tutorial = preload("res://main_game.tscn")
-var main_game = preload("res://tutorial.tscn")
+var tutorial = preload("res://tutorial.tscn")
+var main_game = preload("res://main_game.tscn")
 @onready var buttons_menu = $CenterContainer/buttons
 @onready var credits_menu = $CenterContainer/credits
 

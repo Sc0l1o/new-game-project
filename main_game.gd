@@ -54,7 +54,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	check_inputs()
 
 func check_inputs():
 	# Check simultaneous inputs first
@@ -91,4 +91,7 @@ func execute_combo(combo_name: String):
 	score += combo["points"]
 	pointsLabel.text = "Score: " + str(score)
 
-	character.play_animation(combo["animation"])
+	character.play(combo["animation"])
+
+func random_combo():
+	pass
