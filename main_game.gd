@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var pointsLabel = $Control/CenterContainer/VBoxContainer/points
+@onready var character = $AnimatedSprite2D
 var score = 0
 
 var combos = {

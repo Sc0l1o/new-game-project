@@ -36,6 +36,10 @@ cache/0/50/0/scale = 1.0
 [node name="Node2D" type="Node2D" unique_id=2055690931]
 script = ExtResource("1_1oj5k")
 
+[node name="AnimatedSprite2D" parent="." unique_id=215350710 instance=ExtResource("3_ykeeq")]
+position = Vector2(480, 737)
+animation = &"default"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012695523]
 position = Vector2(480, 480)
 scale = Vector2(5, 5)
@@ -72,6 +76,3 @@ horizontal_alignment = 1
 visible = false
 layout_mode = 2
 text = "RETURN TO MENU"
-
-[node name="AnimatedSprite2D" parent="." unique_id=215350710 instance=ExtResource("3_ykeeq")]
-position = Vector2(480, 737)
