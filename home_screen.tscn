@@ -1,23 +1,57 @@
 [gd_scene format=3 uid="uid://4pyoplhu8a8b"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://drqhsm6osmbd6" path="res://home_screen.gd" id="1_olt8n"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" unique_id=1691357191]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1150.0
 offset_bottom = 648.0
+script = ExtResource("1_olt8n")
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=828074892]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 649.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0.925886, 0.59083766, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1132089692]
 layout_mode = 0
-offset_left = 234.0
-offset_top = 146.0
-offset_right = 911.0
-offset_bottom = 598.0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="buttons" type="VBoxContainer" parent="CenterContainer" unique_id=1194704255]
+layout_mode = 2
+
+[node name="play" type="Button" parent="CenterContainer/buttons" unique_id=1126666163]
+layout_mode = 2
+text = "PLAY"
+
+[node name="tutorial" type="Button" parent="CenterContainer/buttons" unique_id=1858575050]
+layout_mode = 2
+text = "TUTORIAL"
+
+[node name="credits" type="Button" parent="CenterContainer/buttons" unique_id=1122519065]
+layout_mode = 2
+text = "CREDITS
+"
+
+[node name="credits" type="VBoxContainer" parent="CenterContainer" unique_id=723003989]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/credits" unique_id=2062635863]
+layout_mode = 2
+text = "art by: neve, emory
+code by: apple-person"
+
+[node name="back" type="Button" parent="CenterContainer/credits" unique_id=897249487]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="pressed" from="CenterContainer/buttons/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/buttons/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="CenterContainer/buttons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/credits/back" to="." method="_on_back_pressed"]
