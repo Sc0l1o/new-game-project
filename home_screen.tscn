@@ -5,22 +5,22 @@
 [node name="Control" type="Control" unique_id=1691357191]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1150.0
-offset_bottom = 648.0
+offset_right = 960.0
+offset_bottom = 960.0
 script = ExtResource("1_olt8n")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=828074892]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 1.0
-offset_right = 1150.0
-offset_bottom = 650.0
+offset_right = 959.0
+offset_bottom = 961.0
 color = Color(0.925886, 0.59083766, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1132089692]
 layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 648.0
+offset_right = 960.0
+offset_bottom = 960.0
 
 [node name="buttons" type="VBoxContainer" parent="CenterContainer" unique_id=1194704255]
 layout_mode = 2

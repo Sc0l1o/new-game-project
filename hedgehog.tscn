@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://x4etidov6888"]
 
-[node name="Node2D" type="Node2D" unique_id=4603129]
+[ext_resource type="Script" uid="uid://c6sqt0c6il00y" path="res://hedgehog.gd" id="1_8syjs"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=215350710]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=215350710]
+script = ExtResource("1_8syjs")
