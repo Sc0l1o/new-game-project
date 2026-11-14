@@ -11,6 +11,10 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("1_sgcln")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg6gx"]
+atlas = ExtResource("1_sgcln")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_m7ycs"]
 animations = [{
 "frames": [{
@@ -68,6 +72,14 @@ animations = [{
 "loop": 1,
 "name": &"L_pressed",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg6gx")
+}],
+"loop": 1,
+"name": &"S",
+"speed": 5.0
 }]
 
 [node name="Node2D" type="Node2D" unique_id=1082578232]
@@ -76,7 +88,7 @@ script = ExtResource("1_bg6gx")
 [node name="Instruction1" type="AnimatedSprite2D" parent="." unique_id=2091658215]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_m7ycs")
-animation = &"A"
+animation = &"S"
 
 [node name="Instruction2" type="AnimatedSprite2D" parent="." unique_id=904376642]
 position = Vector2(160, 0)

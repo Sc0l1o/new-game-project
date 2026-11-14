@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func setKeys(inputs: Array[String]) -> void:
+func setKeys(inputs: Array) -> void:
 	firstKey.play(inputs[0])
 	secondKey.play(inputs[1])

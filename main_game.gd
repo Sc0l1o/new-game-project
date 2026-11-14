@@ -1,47 +1,48 @@
 extends Node2D
 
-@onready var pointsLabel = $Control/CenterContainer/VBoxContainer/points
+@onready var pointsLabel = $Control/VBoxContainer/points
 @onready var character = $AnimatedSprite2D
+@onready var indicator = $Node2D
 var score = 0
 
 var combos = {
 	"L_Diag": {
-		"inputs": ["a", "d"], # list of keys 
+		"inputs": ["A", "D"], # list of keys 
 		"points": 10,
 		"animation": "L_Diag" #animation name 
 	},
 	"R_Diag": {
-		"inputs": ["a","j"],
+		"inputs": ["A","J"],
 		"points": 10,
 		"animation": "R_Diag"
 	},
 	"russ": {
-		"inputs": ["a","d","k"],
+		"inputs": ["A","D","K"],
 		"points": 50,
 		"animation": "russ"
 	},
 	"B_Diag": {
-		"inputs": ["a","d","j"],
+		"inputs": ["A","D","J"],
 		"points": 25,
 		"animation": "B_Diag"
 	},
 	"R_Ball": {
-		"inputs": ["s","j"],
+		"inputs": ["S","J"],
 		"points": 10,
 		"animation": "R_Ball"
 	},
 	"L_Ball": {
-		"inputs": ["s","d"],
+		"inputs": ["S","D"],
 		"points": 10,
 		"animation": "L_Ball"
 	},
 	"T_Ball": {
-		"inputs": ["s","j","d"],
+		"inputs": ["S","J","D"],
 		"points": 25,
 		"animation": "T_Ball"
 	},
 	"Bounce_Back!": {
-		"inputs": ["a","s","d","j","k","l"],
+		"inputs": ["A","S","D","J","K","L"],
 		"points": 100,
 		"animation": "Bounce_Back!"
 	},
@@ -54,6 +55,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	random_combo()
 	check_inputs()
 
 func check_inputs():
@@ -94,4 +96,13 @@ func execute_combo(combo_name: String):
 	character.play(combo["animation"])
 
 func random_combo():
-	pass
+	var combo_name = combos.keys().pick_random()
+	var combo_data = combos[combo_name]
+
+	print("Combo: ", combo_name)
+	
+	indicator.setKeys(combo_data["inputs"])
+	# print("Points: ", combo_data["points"])
+	# print("Animation: ", combo_data["animation"])
+	
+	return combo_data

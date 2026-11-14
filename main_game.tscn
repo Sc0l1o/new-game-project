@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://kuk4mvoq5ufx" path="res://main_game.gd" id="1_1oj5k"]
 [ext_resource type="Texture2D" uid="uid://slskg7g4orkb" path="res://sprites/stage.png" id="2_yx7mw"]
 [ext_resource type="PackedScene" uid="uid://x4etidov6888" path="res://hedgehog.tscn" id="3_ykeeq"]
+[ext_resource type="PackedScene" uid="uid://c68pvlo385y2p" path="res://indicator.tscn" id="4_6bm6p"]
 
 [sub_resource type="FontFile" id="FontFile_ykeeq"]
 subpixel_positioning = 0
@@ -36,14 +37,15 @@ cache/0/50/0/scale = 1.0
 [node name="Node2D" type="Node2D" unique_id=2055690931]
 script = ExtResource("1_1oj5k")
 
-[node name="AnimatedSprite2D" parent="." unique_id=215350710 instance=ExtResource("3_ykeeq")]
-position = Vector2(480, 737)
-animation = &"default"
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012695523]
 position = Vector2(480, 480)
 scale = Vector2(5, 5)
 texture = ExtResource("2_yx7mw")
+
+[node name="AnimatedSprite2D" parent="." unique_id=215350710 instance=ExtResource("3_ykeeq")]
+position = Vector2(480, 737)
+animation = &"default"
+frame_progress = 0.3771294
 
 [node name="Control" type="Control" parent="." unique_id=1716574629]
 layout_mode = 3
@@ -84,3 +86,6 @@ horizontal_alignment = 1
 visible = false
 layout_mode = 2
 text = "RETURN TO MENU"
+
+[node name="Node2D" parent="." unique_id=1082578232 instance=ExtResource("4_6bm6p")]
+position = Vector2(404, 316)

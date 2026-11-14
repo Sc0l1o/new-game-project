@@ -7,6 +7,30 @@
 atlas = ExtResource("1_dm456")
 region = Rect2(96, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxr56"]
+atlas = ExtResource("1_dm456")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsfwy"]
+atlas = ExtResource("1_dm456")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68vhh"]
+atlas = ExtResource("1_dm456")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb44v"]
+atlas = ExtResource("1_dm456")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iaux"]
+atlas = ExtResource("1_dm456")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7t6e"]
+atlas = ExtResource("1_dm456")
+region = Rect2(32, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dm456"]
 atlas = ExtResource("1_dm456")
 region = Rect2(0, 0, 32, 32)
@@ -34,12 +58,55 @@ animations = [{
 "texture": SubResource("AtlasTexture_m0q0b")
 }],
 "loop": 1,
-"name": &"Diag",
+"name": &"B_Diag",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxr56")
+}],
+"loop": 1,
+"name": &"Bounce_Back!",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsfwy")
+}],
+"loop": 1,
+"name": &"L_Ball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68vhh")
+}],
 "loop": 1,
 "name": &"L_Diag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb44v")
+}],
+"loop": 1,
+"name": &"R_Ball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8iaux")
+}],
+"loop": 1,
+"name": &"R_Diag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7t6e")
+}],
+"loop": 1,
+"name": &"T_Ball",
 "speed": 5.0
 }, {
 "frames": [{
@@ -74,5 +141,5 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=215350710]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_8syjs")
-animation = &"L_Diag"
+animation = &"L_Ball"
 script = ExtResource("1_8syjs")
