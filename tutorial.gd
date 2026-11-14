@@ -10,6 +10,23 @@ var introDialogue = [
 	"Let's bounce and dance!"
 ]
 
+var combos = {
+	"left_ballet": {
+		"inputs": ["left"],
+		"points": 10,
+		"animation": "ballet_left"
+	},
+	"right_ballet": {
+		"inputs": ["right"],
+		"points": 10,
+		"animation": "ballet_right"
+	},
+	"kazachok": {
+		"inputs": ["left", "right"],
+		"points": 25,
+		"animation": "special_combo"
+	}
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

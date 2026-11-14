@@ -1,5 +1,77 @@
 [gd_scene format=3 uid="uid://cir4maq7udyt7"]
 
+[ext_resource type="Script" uid="uid://kuk4mvoq5ufx" path="res://main_game.gd" id="1_1oj5k"]
+[ext_resource type="Texture2D" uid="uid://slskg7g4orkb" path="res://sprites/stage.png" id="2_yx7mw"]
+[ext_resource type="PackedScene" uid="uid://x4etidov6888" path="res://hedgehog.tscn" id="3_ykeeq"]
+
+[sub_resource type="FontFile" id="FontFile_ykeeq"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
 [node name="Node2D" type="Node2D" unique_id=2055690931]
+script = ExtResource("1_1oj5k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012695523]
+position = Vector2(480, 480)
+scale = Vector2(5, 5)
+texture = ExtResource("2_yx7mw")
+
+[node name="Control" type="Control" parent="." unique_id=1716574629]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1098362840]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=104028588]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 0
+offset_top = 38.0
+offset_right = 960.0
+offset_bottom = 179.0
+
+[node name="points" type="Label" parent="Control/VBoxContainer" unique_id=1950208215]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontFile_ykeeq")
+theme_override_font_sizes/font_size = 50
+text = "POINTS:
+0"
+horizontal_alignment = 1
+
+[node name="return" type="Button" parent="Control/VBoxContainer" unique_id=471539811]
+visible = false
+layout_mode = 2
+text = "RETURN TO MENU"
+
+[node name="AnimatedSprite2D" parent="." unique_id=215350710 instance=ExtResource("3_ykeeq")]
+position = Vector2(480, 737)
