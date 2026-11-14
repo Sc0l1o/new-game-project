@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var pointsLabel = $Control/CenterContainer/VBoxContainer/points
+var score = 0
+
 var combos = {
 	"L_Diag": {
 		"inputs": ["press_a", "press_d"], # list of keys 
@@ -46,6 +49,6 @@ func execute_combo(combo_name: String):
 	var combo = combos[combo_name]
 
 	score += combo["points"]
-	score_label.text = "Score: " + str(score)
+	pointsLabel.text = "Score: " + str(score)
 
 	character.play_animation(combo["animation"])

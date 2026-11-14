@@ -3,10 +3,6 @@
 [ext_resource type="Script" uid="uid://c6sqt0c6il00y" path="res://hedgehog.gd" id="1_8syjs"]
 [ext_resource type="Texture2D" uid="uid://cfb3jgi340g47" path="res://sprites/david.png" id="1_dm456"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dm456"]
-atlas = ExtResource("1_dm456")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_uxr56"]
 atlas = ExtResource("1_dm456")
 region = Rect2(0, 0, 32, 32)
@@ -59,6 +55,10 @@ region = Rect2(96, 64, 32, 32)
 atlas = ExtResource("1_dm456")
 region = Rect2(0, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm456"]
+atlas = ExtResource("1_dm456")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkyjo"]
 atlas = ExtResource("1_dm456")
 region = Rect2(64, 32, 32, 32)
@@ -77,14 +77,6 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8syjs"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dm456")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uxr56")
@@ -126,7 +118,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_pa8jr")
 }],
 "loop": 1,
-"name": &"new_animation",
+"name": &"L_Diag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm456")
+}],
+"loop": 1,
+"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -154,5 +154,5 @@ animations = [{
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_8syjs")
 animation = &"russ"
-frame_progress = 0.47224587
+frame_progress = 0.83874553
 script = ExtResource("1_8syjs")
